@@ -18,6 +18,11 @@
     min-height: 100vh;
     background: #111;
     color: #fff;
+    transition: 0.3s;
+}
+
+.showcase.active {
+    right: 300px;
 }
 
 .showcase header {
@@ -43,7 +48,7 @@
 
 .toggle.active {
     background: url(../../files/close-button.png) no-repeat center;
-    background-size: 25px;
+    background-size: 30px;
 }
 
 .showcase video {
@@ -129,19 +134,41 @@
     display: inline-block;
     filter: invert(1);
     margin-right: 10px;
-    transform: scale(0.5);
+    transform: scale(0.75);
     transition: 0.5s;
 }
 
 .social li a:hover {
-    transform: scale(0.5) translateY(-15px)
+    transform: scale(0.75) translateY(-15px)
 }
 
 .menu {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
 }
 
-@media (max-width: 991px) {
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #111;
+}
+
+.menu ul li a:hover {
+    color: #03a9f4
+}
+
+@media (max-width: 798px) {
     .showcase,
     .showcase header {
         padding: 40px;
